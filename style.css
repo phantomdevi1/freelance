@@ -1,0 +1,248 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap');
+
+*{
+    transition: 0.3s;
+    margin: 0 auto;
+    font-family: Inter;
+}
+.autorization_div{
+    width: 621px;
+    height: 419px;  
+    background: #8294C4;
+    border-radius: 10px;
+    margin-top: 230px;
+    display: flex;
+    flex-direction: column;
+}
+.autorization_title{
+    padding-top: 56px;
+    font-weight: 400;
+    font-size: 32px;
+    color: #ffff;
+}
+.email_autorization{
+    margin-top: 35px;
+    background: #D9D9D9;
+    border-radius: 10px;
+    width: 397px;
+    height: 43px;
+    border: none;
+    font-size: 22px;
+}
+.password_autorization{
+    margin-top: 35px;
+    background: #D9D9D9;
+    border-radius: 10px;
+    width: 397px;
+    height: 43px;
+    border: none;
+    font-size: 22px;
+}
+.autorization_btn{
+    margin-top: 35px;
+    background: #ACB1D6;
+    border-radius: 10px;
+    width: 216px;
+    height: 43px;
+    border: none;
+    font-weight: 400;
+    font-size: 28px; 
+    cursor: pointer;   
+}
+.autorization_btn:hover{
+    transform: scale(1.05);
+    background-color: #FFEAD2;
+}
+.autorization_btn:active{
+    background-color: #d3bea6;
+}
+.registr_ssilka{
+    margin-top: 13px;
+    background: #D9D9D9;
+    border-radius: 10px;
+    width: 216px;
+    height: 43px;
+    border: none;
+    font-size: 28px;
+    padding-top: 5px;
+    text-decoration: none;
+    color: black;
+}
+.registr_ssilka:hover{
+    transform: scale(1.05);
+    background-color: #FFEAD2;
+}
+.registr_ssilka:active{
+    background-color: #d3bea6;
+}
+
+
+/* registration */
+
+.registration_div{
+    width: 621px;
+    height: 578px;
+    background: #8294C4;
+    border-radius: 10px;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+}
+.registration_mail{
+    width: 397px;
+    height: 43px;
+    background: #D9D9D9;
+    border-radius: 10px;
+    margin-top: 14px;
+    font-weight: 400;
+    font-size: 20px;
+    border: none;
+}
+.registration_name{
+    width: 397px;
+    height: 43px;
+    background: #D9D9D9;
+    border-radius: 10px;
+    margin-top: 22px;
+    font-weight: 400;
+    font-size: 20px;
+    border: none;
+}
+.nikname_registration{
+    width: 397px;
+    height: 43px;
+    background: #D9D9D9;
+    border-radius: 10px;
+    margin-top: 22px;
+    font-weight: 400;
+    font-size: 20px;
+    border: none;
+}
+.password_registraation{
+    width: 397px;
+    height: 43px;
+    background: #D9D9D9;
+    border-radius: 10px;
+    margin-top: 22px;
+    font-weight: 400;
+    font-size: 20px;
+    border: none;
+}
+.registration_btn{
+    width: 397px;
+    height: 43px;
+    background: #ACB1D6;
+    border-radius: 10px;
+    margin-top: 28px;
+    border: none;
+    font-weight: 400;
+    font-size: 28px;
+    cursor: pointer;
+}
+.registration_btn:hover{
+    transform: scale(1.05);
+    background-color: #FFEAD2;
+}
+.registration_btn:active{
+    background-color: #d3bea6;
+}
+.input_ssilka{
+    width: 216px;
+    height: 43px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 28px;
+    border: none;
+    font-weight: 400;
+    font-size: 32px;
+    background: #ACB1D6;
+    border-radius: 10px;
+    color: black;
+    left: 600px;
+}
+.input_ssilka:hover{
+    transform: scale(1.05);
+    background-color: #FFEAD2;
+}
+.input_ssilka:active{
+    background-color: #d3bea6;
+}
+.bed_svg{
+    position: absolute;
+    width: 512px;
+    height: 512px;
+    left: 20px;
+    top: 251px;
+}
+.drink_svg{
+    position: absolute;
+left: 68.96%;
+right: 4.38%;
+top: 23.24%;
+bottom: 29.35%;
+}
+.freelance_svg{
+    position: absolute;
+width: 564px;
+height: 155px;
+left: 590px;
+top: 20px;
+}
+
+.header_one{
+    width: 1920px;
+    height: 143px;
+    background: #8294C4;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    
+    
+}
+
+
+
+.header_text_two, .header_text_one, .header_text_three{
+margin: 0 auto;
+margin-top: 40px;
+
+
+}
+
+.header_text_two a , .header_text_one a , .header_text_three a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 58px;
+    
+    }
+
+.header_accaunt{
+    padding-left: 350px;
+}
+
+.button_top {
+    
+width: 414px;
+height: 123px;
+background: #ACB1D6;
+border-radius: 10px;
+
+
+}
+
+.knopki a{
+    text-decoration: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 58px;
+    margin-top: 200px;
+}
+
+

@@ -55,21 +55,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Проверка соответствия пароля
     if ($user && password_verify($password, $user['password'])) {
-        // Авторизация успешна
-        echo '<script>alert("Авторизация успешна!");</script>';
-        // Перенаправление на страницу glavnay.php
-        echo '<script>window.location.href = "glavnay.php";</script>';
+        // Передача имени пользователя через URL-параметр
+        $redirectUrl = "main.php?username=" . urlencode($user['nickname']);
+        echo '<script>window.location.href = "' . $redirectUrl . '";</script>';
     } else {
         // Неверные учетные данные
         echo '<script>alert("Неверный никнейм или пароль!");</script>';
     }
 }
 ?>
-
-
-<div class="button_top" >
-    <a href=""></a>
-</div>
 
 </body>
 </html>

@@ -186,63 +186,97 @@ bottom: 29.35%;
     position: absolute;
 width: 564px;
 height: 155px;
-left: 590px;
+left: 674px;
 top: 20px;
 }
 
-.header_one{
-    width: 1920px;
-    height: 143px;
+
+
+/*header*/
+header{
     background: #8294C4;
-    border: 1px solid #000000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    max-width: 1920px;
+    width: 100%;
+    height: 143px;
+    display: inline-flex;
+}
+
+
+header a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+    color: #ffff;
+    margin-right: 59px;
+}
+header a:hover{
+    color: #FFEAD2;
+}
+header ul{
+    list-style: none;
+    padding-top: 42px;
+    margin-left: 120px;
+}
+.toolbar{
+    width: 120px;
+    height: 120px;
+    background: url(img/account.svg);
+    margin-right: 28px;
+    margin-top: 11px;
+    border: none;
+    cursor: pointer;
+}
+
+  .toolbar_drop{
+    position: absolute;
+    width: 242px;
+    height: 122px;
+    left: 1661px;
+    top: 143px;
     display: flex;
-    
-    
+    flex-direction: column;
+    background: #8294C4;
+    border-radius: 0px 0px 10px 10px;
+    display: none; /* Скрываем блок изначально */
+    position: absolute;
+  }
+
+/*main*/
+
+.content_main{
+    display: flex;
+    flex-direction: column;
 }
-
-
-
-.header_text_two, .header_text_one, .header_text_three{
-margin: 0 auto;
-margin-top: 40px;
-
-
-}
-
-.header_text_two a , .header_text_one a , .header_text_three a{
-    color: white;
-    text-decoration: none;
-    font-family: 'Inter';
-    font-style: normal;
+.take_order{
+    margin-top: 400px;
+    background-color: #ACB1D6;
+    border-radius: 10px;
+    width: 414px;
+    height: 123px;
     font-weight: 400;
-    font-size: 40px;
-    line-height: 58px;
-    
-    }
-
-.header_accaunt{
-    padding-left: 350px;
-}
-
-.button_top {
-    
-width: 414px;
-height: 123px;
-background: #ACB1D6;
-border-radius: 10px;
-
-
-}
-
-.knopki a{
+    font-size: 32px;
+    line-height: 120px;
+    color: #000000;
     text-decoration: none;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 58px;
-    margin-top: 200px;
+}
+.take_order:hover{
+    transform: scale(1.05);
 }
 
-
+.make_order{
+    margin-top: 17px;
+    width: 414px;
+    height: 123px;
+    background: #FFEAD2;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 120px;
+    color: #000000;
+    text-decoration: none;
+}
+.make_order:hover{
+    transform: scale(1.05);
+}

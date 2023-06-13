@@ -47,7 +47,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Получение данных из формы
     $username = $_POST['username_autorization'];
     $password = $_POST['password_autorization'];
-
+    $username1 = $username[0];
+     
     // Поиск пользователя в БД по никнейму
     $stmt = $pdo->prepare('SELECT * FROM users WHERE nickname = ?');
     $stmt->execute([$username]);
@@ -56,8 +57,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Проверка соответствия пароля
     if ($user && password_verify($password, $user['password'])) {
         // Передача имени пользователя через URL-параметр
-        $redirectUrl = "main.php?username=" . urlencode($user['nickname']);
-        echo '<script>window.location.href = "' . $redirectUrl . '";</script>';
+        setcookie("name", $username, time()+3600,'/');
+        header('Location: http://3-is1/freelance/main.php');
+        // $redirectUrl = "main.php?username=" . urlencode($user['nickname']);
+        // echo '<script>window.location.href = "' . $redirectUrl . '";</script>';
     } else {
         // Неверные учетные данные
         echo '<script>alert("Неверный никнейм или пароль!");</script>';

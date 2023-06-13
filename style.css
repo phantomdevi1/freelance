@@ -280,3 +280,89 @@ header ul{
 .make_order:hover{
     transform: scale(1.05);
 }
+
+/*make order*/
+.content_make_order{
+    max-width: 1500px;
+}
+.title_make_order{
+    margin-top: 35px;
+    width: 1467px;
+    height: 81px;
+    background: #DBDFEA;
+    border-radius: 10px;
+}
+.title_make_order h3{
+    padding-top: 21px;    
+}
+.content_make_order h3{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    color: #000000;
+}
+.name_order_title{
+    margin-top: 12px;
+}
+.name_order_input{
+    margin-top: 10px;
+    width: 1467px;
+    height: 97px;   
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    font-size: 32px;
+}
+.description_order{
+    margin-top: 12px;
+}
+.content_make_order textarea{
+    width: 1467px;
+    height: 257px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    font-size: 32px;
+    
+}
+.div_price_order{
+    display: inline-flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    width: 1500px;
+}
+.price_make_order{
+    margin-left: 18px;
+    margin-right: 18px;
+    border-radius: 10px;
+    font-size: 32px;
+}
+.submit_make_order{
+    margin-top: 15px;
+    width: 572px;
+    height: 94px;
+    background: #FFEAD2;
+    border-radius: 10px;
+    border: none;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    color: #000000;
+    cursor: pointer;
+}
+.submit_make_order:hover{
+    transform: scale(1.05);
+}
+.date_last_order{
+    border-radius: 10px;
+    font-size: 22px;
+}
+.div_price_order-price{
+    display: inline-flex;
+    margin: 0px;
+    width: 780px;
+    margin-right: 10px;
+}
+.div_price_order-price h3{
+    font-size: 20px;
+
+}

@@ -33,12 +33,12 @@
     </header>
     
     <div class="toolbar_drop">
-        <a href=""><?php echo isset($_GET['username']) ? $_GET['username'] : 'Имя'; ?></a>
-
-        <button>Выход</button>
+        <a href=""><?=$_COOKIE['name']?></a>
+        <a href="deletecookie.php">Выход</a>
     </div>
     
     <center>
+        
     <div class="content_main">
          <a href="take_order" class="take_order">Взять заказ</a>
           <a href="make_order.php" class="make_order">Разместить заказ</a>  

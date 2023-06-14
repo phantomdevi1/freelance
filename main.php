@@ -23,9 +23,9 @@
     <header>
         <ul>
             <li>
-                <a href="">Главная</a>
-                <a href="">Заказы</a>
-                <a href="">Разместить заказ</a>
+                <a href="main.php">Главная</a>
+                <a href="all_order.php">Заказы</a>
+                <a href="make_order.php">Разместить заказ</a>
             </li>
         </ul>
 
@@ -33,14 +33,14 @@
     </header>
     
     <div class="toolbar_drop">
-        <a href=""><?=$_COOKIE['name']?></a>
-        <a href="deletecookie.php">Выход</a>
+    <a href="" class="acount_dropdown"><?=$_COOKIE['name']?></a>
+        <a href="deletecookie.php" class="exit_btn">Выход</a>
     </div>
     
     <center>
         
     <div class="content_main">
-         <a href="take_order" class="take_order">Взять заказ</a>
+         <a href="all_order.php" class="take_order">Взять заказ</a>
           <a href="make_order.php" class="make_order">Разместить заказ</a>  
         </div> 
     </center>

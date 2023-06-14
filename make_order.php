@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <ul>
             <li>
                 <a href="main.php">Главная</a>
-                <a href="">Заказы</a>
+                <a href="all_order.php">Заказы</a>
                 <a href="make_order.php">Разместить заказ</a>
             </li>
         </ul>
@@ -79,8 +79,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </header>
     
     <div class="toolbar_drop">
-        <a href=""> <a href=""><?=$_COOKIE['name']?></a></a>
-        <a href="deletecookie.php">Выход</a>
+    <a href="" class="acount_dropdown"><?=$_COOKIE['name']?></a>
+        <a href="deletecookie.php" class="exit_btn">Выход</a>   
     </div>
     
 
@@ -103,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <h3>₽/заказ</h3>
                     
                     </div>
-                    <div class="">
+                    <div class="div_price_order-date">
                     <h3>До какого числа нужно выполнить заказ:</h3>
                     <input type="date" name="ready_at" class="date_last_order" required>
                     </div>

@@ -229,7 +229,7 @@ header ul{
     cursor: pointer;
 }
 
-  .toolbar_drop{
+.toolbar_drop{
     position: absolute;
     width: 242px;
     height: 122px;
@@ -241,8 +241,38 @@ header ul{
     border-radius: 0px 0px 10px 10px;
     display: none; /* Скрываем блок изначально */
     position: absolute;
-  }
+}
 
+.acount_dropdown{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 39px;
+    color: #FFFFFF;
+    text-decoration: none;
+    }
+    .acount_dropdown:hover{
+        color: #d3bea6;
+    }
+    .exit_btn{
+        margin-top: 18px;
+    width: 129px;
+    height: 44px;
+    background: #FF0000;
+    border-radius: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 39px;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    }
+    .exit_btn:hover{
+        transform: scale(1.05);
+    }
 /*main*/
 
 .content_main{
@@ -334,7 +364,8 @@ header ul{
     margin-left: 18px;
     margin-right: 18px;
     border-radius: 10px;
-    font-size: 32px;
+    font-size: 22px;
+    height: 30px;
 }
 .submit_make_order{
     margin-top: 15px;
@@ -366,3 +397,88 @@ header ul{
     font-size: 20px;
 
 }
+.div_price_order-date h3{
+    font-size: 20px;
+
+}
+
+/*all_order*/
+.title_all_order{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    justify-content: center;
+    display: flex;
+
+}
+.div_order{
+    width: 1467px;
+    min-height: 243px;
+    background: #8294C4;
+    border-radius: 10px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.display_flex{
+    display: flex;
+}
+.flex_column{
+    display: flex;
+    flex-direction: column;
+}
+.description_order{
+    width: 1080px;
+    text-align: left;
+}
+.title_order{
+    font-weight: 700;
+    font-size: 40px;font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    margin-left: 0;
+    color: #FFFFFF;
+}
+.price_btn_order{
+    width: 270px;
+    justify-content: center;
+}
+.description-order{
+    font-weight: 400;
+    font-size: 32px;
+    color: #FFFFFF;
+}
+.created_order{
+    font-weight: 400;
+    font-size: 32px;
+    color: #FFFFFF;
+    margin-left: 0px;
+}
+.price_order{
+    font-weight: 500;
+    font-size: 40px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.concret_order{
+    width: 263px;
+    height: 76px;
+    background: #FFEAD2;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 32px;
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.concret_order:hover{
+    transform: scale(1.05);
+}
+

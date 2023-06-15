@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Freelance - найдите надежных и квалифицированных фрилансеров для выполнения любых задач. Мы предлагаем широкий спектр услуг, от веб-разработки до дизайна и маркетинга. Безопасная платформа для поиска и общения с профессионалами, готовыми помочь вам реализовать любой проект.">
     <title>Главная</title>
     <link rel="stylesheet" href="style.css">
     <style>
@@ -33,10 +34,10 @@
     </header>
     
     <div class="toolbar_drop">
-    <a href="" class="acount_dropdown"><?=$_COOKIE['name']?></a>
+    <a href="profile.php" class="acount_dropdown"><?=$_COOKIE['name']?></a>
         <a href="deletecookie.php" class="exit_btn">Выход</a>
     </div>
-    
+    <h1 class="key_word">freelance, сделать заказ, работа</h1>
     <center>
         
     <div class="content_main">

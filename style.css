@@ -6,6 +6,9 @@
     margin: 0 auto;
     font-family: Inter;
 }
+.key_word{
+    display: none;
+}
 .autorization_div{
     width: 621px;
     height: 419px;  
@@ -482,3 +485,133 @@ header ul{
     transform: scale(1.05);
 }
 
+/*concret_order*/
+.content_concret_order{
+    max-width: 1100px;
+    min-height: 200px;
+}
+.title_concret_order{
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    background-color: #DBDFEA;
+    border-radius: 10px;
+    margin-top: 53px;
+    height: 60px;
+    padding-top: 16px;
+}
+.title_concret_order h3{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;  
+    
+}
+.price_order-order{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    margin-top: 15px;
+}
+.order_info{
+    margin-top: 34px;
+}
+.order_info h4{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: #000000;
+
+}
+.order_info_span{
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 39px;
+    color: #868181;
+}
+.name_customer{
+    color: #868181;
+}
+.crated_date_order{
+    color: #868181;
+    margin-left: 40px;
+}
+.div_description_order-order h3{
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 39px;
+    color: #000000;
+    margin-top: 24px;
+}
+.take_order_btn{
+    width: 250px;
+    height: 76px;
+    background: #ACB1D6;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    margin-top: 100px;
+}
+.take_order_btn:hover{
+    background-color: #d3bea6;
+    color: #FFFFFF;
+}
+.take_order_btn:active{
+    transform: scale(1.1);
+}
+
+/*profile*/
+.content_profile{
+    max-width: 1250px;
+    margin-top: 25px;
+    
+}
+.avatarka-div{
+    width: 273px;
+    margin-left: 0px;
+    display: inline-flex;
+}
+.name_profile{
+    margin-left: 45px;
+    margin-top: 125px;
+}
+.makes_order-profile-title{
+    margin-top: 20px;
+    width: 1015px;
+    height: 81px;
+    background: #DBDFEA;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    justify-content: center;            
+    align-items: center;
+}
+.makes_order-profile-title h3{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    color: #000000;
+    text-align: center;
+}
+.makes_order-profile-content{
+    width: 1015px;
+    min-height: 90px;
+    background: #FFEAD2;
+    border-radius: 0px 0px 10px 10px;
+}
+.margin50{
+    margin-top: 50px;
+}
+.completed-job{
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+}
+.job-title, .job-rating, .job-link{
+    margin-top: 15px;
+}

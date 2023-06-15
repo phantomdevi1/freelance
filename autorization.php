@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<h1 class="key_word">freelance, сделать заказ, работа</h1>
 <img src="img/bed.svg" alt="" class="bed_svg">
     <img src="img/drink.svg" alt="" class="drink_svg">
     <img src="img/freelance.svg" alt="" class="freelance_svg">

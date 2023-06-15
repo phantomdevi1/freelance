@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<h1 class="key_word">freelance, регистрация</h1>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $host = 'localhost';

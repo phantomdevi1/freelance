@@ -63,6 +63,7 @@
     if (isset($_GET['id'])) {
         $orderId = $_GET['id'];
 
+        setcookie("order_id", $orderId, time()+3600,'/');
         // Получение данных из базы данных
         $host = 'localhost';
         $db   = 'freelance';
@@ -103,36 +104,49 @@
                 if ($user) {
                     $userId = $user['id'];
 
-                    $stmt = $pdo->prepare('INSERT INTO user_jobs (user_id, job_id) VALUES (?, ?)');
+                    // Проверяем, не взят ли заказ уже данным пользователем
+                    $stmt = $pdo->prepare('SELECT * FROM user_jobs WHERE user_id = ? AND job_id = ?');
                     $stmt->execute([$userId, $orderId]);
+                    $existingOrder = $stmt->fetch();
 
-                    echo '<script> alert("Заказ успешно взят!")</script>';
+                    if ($existingOrder) {
+                        echo '<script> alert("Вы уже взяли этот заказ!")</script>';
+                    } else {
+                        $stmt = $pdo->prepare('INSERT INTO user_jobs (user_id, job_id) VALUES (?, ?)');
+                        $stmt->execute([$userId, $orderId]);
+
+                        // Добавление записи в таблицу current_jobs
+                        $stmt = $pdo->prepare('INSERT INTO current_jobs (job_id, user_id) VALUES (?, ?)');
+                        $stmt->execute([$orderId, $userId]);
+
+                        echo '<script> alert("Заказ успешно взят!")</script>';
+                    }
                 }
             }
+    ?>
+    <!-- Ваш HTML-код продолжается здесь -->
+    <div class="order_info">
+        <h4><?= $title ?></h4>
+        <a href="" class="name_customer"><?= $customer ?></a>
+        <span class="created_date_order"><?= $created_at ?></span>
+    </div>
 
-            ?>
-            <div class="order_info">
-                <h4><?= $title ?></h4>
-                <a href="" class="name_customer"><?= $customer ?></a>
-                <span class="created_date_order"><?= $created_at ?></span>
-            </div>
+    <div class="price_order-order">
+        <span>Оплата: <?= $budget ?> ₽/заказ</span>
+    </div>
 
-            <div class="price_order-order">
-                <span>Оплата: <?= $budget ?> ₽/заказ</span>
-            </div>
+    <div class="div_description_order-order">
+        <h3>Описание</h3>
+        <span class="description_order-order"><?= $description ?></span>
+    </div>
 
-            <div class="div_description_order-order">
-                <h3>Описание</h3>
-                <span class="description_order-order"><?= $description ?></span>
-            </div>
+    <form method="POST" action="">
 
-            <form method="POST">
-                <center>
-                    <input type="submit" class="take_order_btn" name="take_order" value="Взять"/>
-                </center>
-            </form>
-
-            <?php
+        <center>
+            <input type="submit" class="take_order_btn" name="take_order" value="Взять"/>
+        </center>
+    </form>
+    <?php
         } else {
             echo '<div class="no-orders-message">Заказ не найден</div>';
         }
@@ -140,6 +154,9 @@
         echo '<div class="no-orders-message">Некорректный идентификатор заказа</div>';
     }
     ?>
+
+    <a href="hire.php" class="a_hirephp">Посмотреть исполнителей</a>
+    
 
 </div>
 

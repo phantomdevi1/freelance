@@ -35,6 +35,7 @@
     </header>
     
     <div class="toolbar_drop">
+      <a href="profile.php" class="acount_dropdown"><?=$_COOKIE['name']?></a>
     <a href="profile.php" class="acount_dropdown"><?=$_COOKIE['name']?></a>
         <a href="deletecookie.php" class="exit_btn">Выход</a>
     </div>
@@ -46,7 +47,7 @@
       <img src="img/bed.svg" alt="" class="avatarka" width="273px">
       </div>
       <span class="name_profile">
-        123
+      <?=$_COOKIE['name']?>
       </span>
       </div>
       

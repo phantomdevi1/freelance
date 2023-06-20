@@ -6,6 +6,7 @@
     margin: 0 auto;
     font-family: Inter;
 }
+
 .key_word{
     display: none;
 }
@@ -354,7 +355,7 @@ header ul{
     height: 257px;
     background: #FFFFFF;
     border-radius: 10px;
-    font-size: 32px;
+    font-size: 22px;
     
 }
 .div_price_order{
@@ -422,6 +423,7 @@ header ul{
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 .display_flex{
     display: flex;

@@ -45,14 +45,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Показать сообщение об успешном размещении заказа
         echo '<script>alert("Заказ успешно размещен!");</script>';
+        header('Location: http://3-is1/freelance/all_order.php');
     } else {
         // Показать сообщение об ошибке незаполненных полей
         echo '<script>alert("Пожалуйста, заполните все поля!");</script>';
     }
 }
+
 ?>
 
-<!-- Остальной HTML-код -->
 
 
 <!DOCTYPE html>

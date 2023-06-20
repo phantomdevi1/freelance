@@ -51,13 +51,7 @@
       </span>
       </div>
       
-      <div class="makes_order-profile">
-        <div class="makes_order-profile-title">
-          <h3>Заказы на выполнение</h3>
-        </div>
-        <div class="makes_order-profile-content">
-
-        </div>
+    
       </div>
 
       <div class="makes_order-profile margin50">

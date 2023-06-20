@@ -97,7 +97,14 @@
         echo '<div class="display_flex">';
         echo '<div class="flex_column description_order">';
         echo '<h4 class="title_order">' . $title . '</h4>';
-        echo '<span class="description-order">' . $description . '</span>';
+
+        $words = explode(' ', $description);
+        $shortDescription = implode(' ', array_slice($words, 0, 15));
+        if (count($words) > 15) {
+            $shortDescription .= '...';
+        }
+        echo '<span class="description-order">' . $shortDescription . '</span>';
+
         echo '<span class="created_order">' . $created_at . '</span>';
         echo '</div>';
         echo '<div class="flex_column price_btn_order">';

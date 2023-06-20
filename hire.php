@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Freelance - найдите надежных и квалифицированных фрилансеров для выполнения любых задач. Мы предлагаем широкий спектр услуг, от веб-разработки до дизайна и маркетинга. Безопасная платформа для поиска и общения с профессионалами, готовыми помочь вам реализовать любой проект.">
-    <title>Главная</title>
+    <title>Исполнители</title>
     <link rel="stylesheet" href="style.css">
     <style>
       .toolbar_drop {
@@ -34,11 +34,16 @@
     </header>
     
     <div class="toolbar_drop">
-    <a href="profile.php" class="acount_dropdown"><?=$_COOKIE['name']?></a>
+        <a href="profile.php" class="acount_dropdown"><?=$_COOKIE['name']?></a>
         <a href="deletecookie.php" class="exit_btn">Выход</a>
     </div>
     <h1 class="key_word">freelance, сделать заказ, работа</h1>
     <div class="content_hire">
+        <div class="title_make_order">
+            <center>
+                <h3>Кандидаты на исполнение заказа</h3>
+            </center>
+        </div>
         <?php
             // Подключение к базе данных
             $servername = "localhost";
@@ -63,17 +68,17 @@
                     INNER JOIN users ON user_jobs.user_id = users.id
                     WHERE user_jobs.job_id = '$orderId' AND user_jobs.user_id != '$user_id'";
             $result = $conn->query($sql);
-            $writing_hire = "INSERT INTO current_jobs (job_id, user_id)"
+            $writing_hire = "INSERT INTO current_jobs (job_id, user_id)";
             if ($result->num_rows > 0) {
                 // Вывод данных
                 while($row = $result->fetch_assoc()) {
                     echo "<div class='hire_item'>";
                     echo "<p class='nickname'>" . $row["nickname"] . "</p>";
-                    echo "<button class='hire_btn'>Нанять</button>";
+                    echo "<button class='hire_btn' onclick='hireUser(" . $row["user_id"] . ")'>Нанять</button>";
                     echo "</div>";
                 }
             } else {
-                echo"<center>";
+                echo "<center>";
                 echo "Никто ещё не откликнулся :(";
                 echo "</center>";
             }
@@ -98,6 +103,17 @@
                 toolbarDrop.style.display = 'none';
             }
         });
+
+        function hireUser(userId) {
+            // Проверка, если пользователь уже нанят
+            const isHired = true; // Здесь должна быть логика проверки найма пользователя
+            if (isHired) {
+                alert("Пользователь уже нанят.");
+            } else {
+                // Здесь можно добавить логику для найма пользователя
+                alert("Пользователь нанят.");
+            }
+        }
     </script>
 
 </body>

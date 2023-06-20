@@ -50,7 +50,7 @@
 </header>
 
 <div class="toolbar_drop">
-<a href="profile.php" class="acount_dropdown"><?=$_COOKIE['name']?></a>
+    <a href="profile.php" class="acount_dropdown"><?=$_COOKIE['name']?></a>
     <a href="deletecookie.php" class="exit_btn">Выход</a>
 </div>
 
@@ -139,13 +139,28 @@
         <h3>Описание</h3>
         <span class="description_order-order"><?= $description ?></span>
     </div>
-
     <form method="POST" action="">
-
         <center>
             <input type="submit" class="take_order_btn" name="take_order" value="Взять"/>
         </center>
     </form>
+     <div class="more_hire">
+        <center>       
+    <?php
+        $userNickname = $_COOKIE['name'];
+        $stmt = $pdo->prepare('SELECT id FROM users WHERE nickname = ?');
+        $stmt->execute([$userNickname]);
+        $user = $stmt->fetch();
+
+        if ($user && $user['id'] === $order['employer_id']) {
+            echo '<a href="hire.php" class="a_hirephp">Посмотреть исполнителей</a>';
+        }
+    ?>
+    </center>        
+    </div> 
+
+   
+
     <?php
         } else {
             echo '<div class="no-orders-message">Заказ не найден</div>';
@@ -154,9 +169,6 @@
         echo '<div class="no-orders-message">Некорректный идентификатор заказа</div>';
     }
     ?>
-
-    <a href="hire.php" class="a_hirephp">Посмотреть исполнителей</a>
-    
 
 </div>
 
